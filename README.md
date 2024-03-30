@@ -7,3 +7,10 @@ This code is developed to give the analytical solution of our nonlocal continuum
 Stress state: Uniaxial compressive stress
 
 Material: concrete, see Karsan and Jirsa, 1969
+
+
+References:
+[1] Tao You, https://github.com/hhutyou/MPFM_Constitutive_Relation
+
+
+
