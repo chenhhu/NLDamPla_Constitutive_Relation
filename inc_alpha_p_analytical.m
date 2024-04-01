@@ -8,9 +8,9 @@ clc
 %%
 % csvread(filename,R1,C1,[R1 C1 R2 C2])  of experimental datas extracted
 % from Karsan and Jirsa 1969
-y1=csvread('Karsan1969.csv',0,0,[0,0,27,1])';
-xdata=y1(1,:);
-ydata=y1(2,:);
+y1=csvread('Karsan1969.csv',0,0,[0,0,26,1])';
+exp_strain1=y1(1,:);
+exp_sigma1=y1(2,:);
 %%
 syms chi_p E c_f alpha_p c_0 h_p beta kappa kappa_i sigma1 A B D
 % local equivalent strain, Eqs. (38), (39) and (40)
@@ -49,13 +49,14 @@ for alpha_p=0.000001:0.0001:0.015
     else
         D(i)=D_fun1(beta,kappa,kappa_i);
     end
-    sigma1(i)=sigma1_fun1(A,B,chi_p,D(i),c_f,c_0,h_p,alpha_p); % Axial stress
+    ana_sigma1(i)=sigma1_fun1(A,B,chi_p,D(i),c_f,c_0,h_p,alpha_p); % Axial stress
     N=-sqrt(3)/3+C/3; % Axial plastic flow direction
-    strain1(i)=alpha_p/B*N+sigma1(i)/E; % Axial strain, see Eq. (33), (37), (24) and (25)
+    ana_strain1(i)=alpha_p/B*N+ana_sigma1(i)/E; % Axial strain, see Eq. (33), (37), (24) and (25)
+    ana_alpha_p(i)=alpha_p;
 end  
 %% 
 figure(1)
-plot(xdata,ydata,'ko',[0,strain1],[0,sigma1],'b-');
+plot(exp_strain1,exp_sigma1,'ko',[0,ana_strain1],[0,ana_sigma1],'b-');
 %  ylabel
 ylabel({'Axial stress $\sigma_1$ [MPa]'},'Interpreter','latex');
 %  xlabel
@@ -63,9 +64,11 @@ xlabel({'Axial strain $\varepsilon_1$ [\%]'},'Interpreter','latex');
 xlim([-0.006 0])
 set(gca,'XDir','reverse','YDir','reverse');
 figure(2)
-plot([0,strain1],[0,D]);
+plot([0,ana_strain1],[0,D]);
 set(gca,'XDir','reverse');
-
+figure(3)
+plot([0,ana_strain1],[0,ana_alpha_p]);
+set(gca,'XDir','reverse');
 
 
 
