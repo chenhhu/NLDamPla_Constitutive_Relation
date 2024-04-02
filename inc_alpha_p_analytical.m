@@ -65,9 +65,11 @@ xlim([-0.006 0])
 set(gca,'XDir','reverse','YDir','reverse');
 figure(2)
 plot([0,ana_strain1],[0,D]);
+xlim([-0.006 0])
 set(gca,'XDir','reverse');
 figure(3)
 plot([0,ana_strain1],[0,ana_alpha_p]);
+xlim([-0.006 0])
 set(gca,'XDir','reverse');
 
 
