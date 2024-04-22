@@ -4,9 +4,15 @@ Analytical solution of our nonlocal continuum damage-plasticity model in Chen et
 
 This code is developed to give the analytical solution of our nonlocal continuum damage-plasticity model, see Chen et al., 2024 (J).
 
-Stress state: Uniaxial compressive stress
 
-Material: concrete, see Karsan and Jirsa, 1969
+Various loading pathes:
+
+(1) Uniaxial compressive loading, test data-Karsan and Jirsa, 1969
+
+(2) Biaxial compressive loading, test data-Kupfer and Gerstle, 1973
+
+(3) Conventional triaxial compressive loading, test data-Walton et al. 2017; Yang et al. 2008
+
 
 
 References:
