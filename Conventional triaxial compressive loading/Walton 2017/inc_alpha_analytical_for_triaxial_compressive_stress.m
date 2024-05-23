@@ -44,7 +44,8 @@ c_0=24.0905;
 theta=pi/180*40;
 A=6*sin(theta)/sqrt(3)/(3+sin(theta));
 B=6*cos(theta)/sqrt(3)/(3+sin(theta));
-C=6*sin(theta)/sqrt(3)/(3+sin(theta));
+vartheta=pi/180*40;
+C=6*sin(vartheta)/sqrt(3)/(3+sin(vartheta));
 
 sigma_c=2.01;                        
 kappa_i=sigma_c/E;

@@ -25,13 +25,14 @@ sigma1_fun1=str2func(['@(A,B,chi_p,D,c_f,c_0,h_p,alpha_p)',vectorize(sigma1_fun0
 %% Initiation of material parameters. 
 i=0;
 E=31700; %[MPa]
-c_0=5.23; %[MPa]
+c_0=5.23;
 theta=pi/180*40;
 A=6*sin(theta)/sqrt(3)/(3+sin(theta));
 B=6*cos(theta)/sqrt(3)/(3+sin(theta));
-C=6*sin(theta)/sqrt(3)/(3+sin(theta));
+vartheta=pi/180*30;
+C=6*sin(vartheta)/sqrt(3)/(3+sin(vartheta));
 
-par=[0.9212   11.1506   40.4362  361.4485  535.6735]; % R^2=0.99 % obtain from the calibration procedure using nonlinear leasr squares fitting
+par=[0.9224   11.2633   45.0024  341.7659  588.4152]; % R^2=0.99 % obtain from the calibration procedure using nonlinear leasr squares fitting
 chi_p=par(1);
 sigma_c=par(2);                        
 kappa_i=sigma_c/E;

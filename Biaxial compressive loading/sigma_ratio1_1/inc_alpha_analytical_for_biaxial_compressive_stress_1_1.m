@@ -1,7 +1,7 @@
 % This code is developed to give the analytical solution of the 
 % nonlocal continuum damage-plasticity model, see Chen et al., 2024 (Journal). 
-% Stress state: Uniaxial compression stree state
-% test data-Kupfer and Gerstle, 1973
+% Stress state: Biaxial compression stree state
+% test data-Kupfer, 1969
 clear all
 close all
 clc
@@ -25,14 +25,15 @@ sigma1_fun1=str2func(['@(A,B,chi_p,D,c_f,c_0,h_p,alpha_p)',vectorize(sigma1_fun0
 %% Initiation of material parameters. 
 i=0;
 E=31000; %[MPa]
-v=0.2;
+v=0.18;
 c_0=4.0569;
 theta=pi/180*40;
 A=6*sin(theta)/sqrt(3)/(3+sin(theta));
 B=6*cos(theta)/sqrt(3)/(3+sin(theta));
-C=6*sin(theta)/sqrt(3)/(3+sin(theta));
+vartheta=pi/180*30;
+C=6*sin(vartheta)/sqrt(3)/(3+sin(vartheta));
 
-par=[1.0000   19.3271   41.0121   32.4611  280.7828];
+par=[1.0000   17.9541   37.0846   52.0799  340.0175];
 chi_p=par(1);
 sigma_c=par(2);                        
 kappa_i=sigma_c/E;
