@@ -7,7 +7,7 @@ This code is developed to give the analytical solution of our nonlocal continuum
 
 Various loading pathes:
 
-(1) Uniaxial compressive loading, test data-Karsan and Jirsa, 1969£» Kupfer, 1969
+(1) Uniaxial compressive loading, test data-Karsan and Jirsa, 1969; Kupfer, 1969
 
 (2) Biaxial compressive loading, test data-Kupfer, 1969
 
