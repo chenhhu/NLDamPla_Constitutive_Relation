@@ -3,19 +3,12 @@
 This code is developed to give the analytical solution of our nonlocal continuum damage-plasticity model, please see:
 
 @article{chen2025thermodynamic,
-
   title={Thermodynamic framework of non-local continuum damage--plasticity model},
-  
   author={Chen, Yijun and Mobasher, Mostafa E and Zheng, Dongjian and Waisman, Haim},
-  
   journal={International Journal of Rock Mechanics and Mining Sciences},
-  
   volume={186},
-  
   pages={106007},
-  
   year={2025},
-  
   publisher={Elsevier}
 }
 
