@@ -1,6 +1,7 @@
 # Nonlocal_damage_plasticity_Constitutive_Relation
 
-This code is developed to give the analytical solution of our nonlocal continuum damage-plasticity model, please:
+This code is developed to give the analytical solution of our nonlocal continuum damage-plasticity model, please see:
+
 @article{chen2025thermodynamic,
   title={Thermodynamic framework of non-local continuum damage--plasticity model},
   author={Chen, Yijun and Mobasher, Mostafa E and Zheng, Dongjian and Waisman, Haim},
@@ -12,7 +13,7 @@ This code is developed to give the analytical solution of our nonlocal continuum
 }
 
 
-Various loading pathes:
+Various loading paths:
 
 (1) Uniaxial compressive loading, test data-Karsan and Jirsa, 1969; Kupfer, 1969
 
